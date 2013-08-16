@@ -5,4 +5,4 @@ Volker Dusch
 http://twitter.com/__edorian
 
 **About:**
-Web developer at ResearchGate. Currently into Continues Deployment, the Clean Code movement and TDD.
+Web developer at ResearchGate. Currently into Continuous Deployment, the Clean Code movement and TDD.
