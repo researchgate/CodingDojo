@@ -7,7 +7,7 @@ their coding skills by practicing them together with fellow programmers.
 **Access Limited** - The number of participants is limited so make sure you book your seat by sending a mail to dojo@researchgate.net
 or adding your info directly to the [participants folder][participants].
 
-We're looking forward to seeing you on the **27th of August 2013** at **19:00** in the ResearchGate [headquarter].
+We're looking forward to seeing you on the **27th of August 2013** at **19:00** (until approx. 21:00) in the ResearchGate [headquarter].
 
 [CodingDojo]: http://codingdojo.org/
 [ResearchGate]: https://www.researchgate.net/aboutus.AboutUs.html
