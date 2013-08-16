@@ -1,8 +1,8 @@
 CodingDojo @ResearchGate
 ========================
 
-We're organizing a [CodingDojo] at [ResearchGate] for all developers of Berlin who want to improve their 
-coding skills.
+We're organizing a [CodingDojo] at [ResearchGate] for all developers of Berlin who want to improve
+their coding skills by practicing them together with fellow programmers.
 
 **Access Limited** - The number of participants is limited so make sure you book your seat by sending a mail to dojo@researchgate.net
 or adding your info directly to the [participants folder][participants].
