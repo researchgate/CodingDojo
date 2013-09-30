@@ -1,0 +1,25 @@
+---
+layout: default
+title: Home
+---
+
+<div id="wrap">
+    <ul id="content">
+        {% for post in site.posts limit:10 %}
+        <li>
+            <div class="serendipity_Entry_Date">
+                <div class="post-info">
+                    <p class="post-date">{{ post.date | date: "%A, %B %d. %Y" }}</p>
+                    <h2 class="post-title">{{ post.title }}</h2>
+                </div>
+
+                <div class="serendipity_entry_body">
+                    {{ post.content }}
+                </div>
+
+                <div class="post-footer">&nbsp;</div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
