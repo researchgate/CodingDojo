@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "First Researchfate CodingDojo"
+title: "First Researchgate CodingDojo"
 date: 2013-08-27 19:00
 comments: true
 categories: 
