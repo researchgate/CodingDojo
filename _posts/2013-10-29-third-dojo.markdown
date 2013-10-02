@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Third Researchgate CodingDojo"
+title: "Third ResearchGate CodingDojo"
 date: 2013-10-29 19:00
 comments: true
 categories: 
