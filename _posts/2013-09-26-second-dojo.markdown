@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Second Researchgate CodingDojo"
-date: 2013-08-27 19:00
+title: "Second ResearchGate CodingDojo"
+date: 2013-09-26 19:00
 comments: true
 categories: 
 ---
