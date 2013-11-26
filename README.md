@@ -9,6 +9,10 @@ about having fun while coding.
 
 **Follow us** on [twitter] to be informed about upcoming dojos
 
+You can **register** by
+* adding yourself to the `participants` folder of the current CodingDojo
+* or sending an email to dojo@researchgate.net
+
 [CodingDojo]: http://codingdojo.org/
 [ResearchGate]: https://www.researchgate.net/aboutus.AboutUs.html
 [blog]: http://researchgate.github.io/CodingDojo/
