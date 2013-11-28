@@ -9,7 +9,7 @@ Details remain a surprise.
 
 ### Specification ###
 
-The programs we write are to control a 4x4 LED grid over HTTP. The payload is sent with POST and contains the patterns and delay for each pattern. First the delay in milliseconds (should be >50), then a dash, and then the 16 zeros or ones for the 6 LEDs.
+The programs we write are to control a 4x4 LED grid over HTTP. The payload is sent with POST and contains the patterns and delay for each pattern. First the delay in milliseconds (should be >50), then a dash, and then the 16 zeros or ones for the 16 LEDs.
 
 Example:
 
