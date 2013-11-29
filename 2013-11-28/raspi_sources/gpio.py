@@ -1,6 +1,6 @@
 ﻿import RPi.GPIO as io
 import time
-import parser
+import x_parser
 
 io.setmode(io.BOARD)
 
@@ -24,7 +24,7 @@ while True:
 	if content.strip() == '':
 		continue
 
-	patterns = parser.parse(content)
+	patterns = x_parser.parse(content)
 	
 	for delay, pattern in patterns:
 		for p in range(len(pattern)):
