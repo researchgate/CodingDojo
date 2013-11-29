@@ -10,4 +10,4 @@ while True:
         for i in range(0, 4):
             print pattern[i * 4:i * 4 + 4]
         time.sleep(delay)
-        os.system('clear')
+        os.system('cls')

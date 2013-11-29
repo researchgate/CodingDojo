@@ -1,6 +1,7 @@
 #!/usr/bin/python
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 import x_parser
+import message_parser
 
 PORT_NUMBER = 8080
 
@@ -20,10 +21,18 @@ class myHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length)
+
         try:
-            x_parser.parse(post_data)
+            if self.path == '/message':
+                if len(post_data) > 140:
+                    raise Exception('Message is too long (max 140 chars allowed)')
+                pattern = message_parser.parse(post_data)
+            else:
+                x_parser.parse(post_data)
+                pattern = post_data
+
             f = open('pattern', 'w')
-            f.write(post_data)
+            f.write(pattern)
             f.close()
             self.respond(200, "OK")
         except Exception as e:
