@@ -18,9 +18,14 @@ while False:
 
 while True:
 	f = open('pattern')
-	patterns = parser.parse(f.read())
+	content = f.read()
 	f.close()
 
+	if content.strip() == '':
+		continue
+
+	patterns = parser.parse(content)
+	
 	for delay, pattern in patterns:
 		for p in range(len(pattern)):
 			io.output(pins[p], pattern[p] != ' ')
