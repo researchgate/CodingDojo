@@ -34,17 +34,17 @@ class MoveLongSnakeTest(unittest.TestCase):
         self.game.givenA_Times_Field(5, 5)
         self.game.givenTheSnakeAt([(2, 2), (1, 2), (0, 2)])
 
-    def test_moveRight(self):
+    def test_goStraight(self):
         self.game.givenItsDirectionIs(game.direction.right)
         self.game.whenTheGameIsUpdated()
         self.game.thenTheSnakeShouldBeAt([(3, 2), (2, 2), (1, 2)])
 
-    def test_moveUp(self):
+    def test_turnLeft(self):
         self.game.givenItsDirectionIs(game.direction.up)
         self.game.whenTheGameIsUpdated()
         self.game.thenTheSnakeShouldBeAt([(2, 1), (2, 2), (1, 2)])
 
-    def test_moveDown(self):
+    def test_turnRight(self):
         self.game.givenItsDirectionIs(game.direction.down)
         self.game.whenTheGameIsUpdated()
         self.game.thenTheSnakeShouldBeAt([(2, 3), (2, 2), (1, 2)])
@@ -144,7 +144,7 @@ class ChangeDirection(unittest.TestCase):
         self.game.whenTheGameIsUpdated()
         self.game.thenTheSnakeShouldBeAt([(1,0)])
 
-    def test_doNotTurnAroundGoinfLeft(self):
+    def test_doNotTurnAroundGoingLeft(self):
         self.game.givenItsDirectionIs(game.direction.left)
         self.game.givenThenNextDirectionIs(game.direction.right)
         self.game.whenTheGameIsUpdated()

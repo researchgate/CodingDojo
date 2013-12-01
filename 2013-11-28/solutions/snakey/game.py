@@ -2,10 +2,10 @@ import random
 
 
 class direction:
-    up = 1
-    right = 2
-    down = 3
-    left = 4
+    up = 0
+    right = 1
+    down = 2
+    left = 3
 
 
 class Game:

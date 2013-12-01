@@ -6,6 +6,7 @@ import screen_gui
 period = 200
 size = 14
 withTree = '-t' in sys.argv
+paused = False
 
 if '-p' in sys.argv:
     period = int(sys.argv[sys.argv.index('-p') + 1])
@@ -18,6 +19,9 @@ if withTree:
 
 
 def update():
+    if paused:
+        top.after(period / 10, update)
+        return
     snake.update()
     if snake.isOver():
         itsOver()
@@ -47,8 +51,15 @@ directions = {
 
 
 def keyPressed(e):
+    global paused
     if e.keysym in directions.keys():
         snake.nextDirection = directions[e.keysym]
+    elif e.keysym in ['q', 'o']:
+        snake.nextDirection = (snake.direction - 1) % 4
+    elif e.keysym in ['w', 'p']:
+        snake.nextDirection = (snake.direction + 1) % 4
+    elif e.keysym == 'space':
+        paused = not paused
 
 
 top = tk.Tk()
