@@ -1,0 +1,17 @@
+.canvas {
+  width: 220px;
+  height: 220px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.cell {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 4px;
+}
+
+.selected {
+  background: red;
+}
