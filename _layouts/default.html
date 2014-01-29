@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>CodingDojo</title>
-    <link rel="stylesheet" type="text/css" href="http://news.researchgate.net/index.php?/serendipity.css">
-    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.css"/>
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{site.baseurl}}/feed.xml" />
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>CodingDojo</title>
+        <link rel="stylesheet" type="text/css" href="http://news.researchgate.net/index.php?/serendipity.css">
+        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.css"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{site.baseurl}}/feed.xml" />
+    </head>
 <body>
-<div id="wraphead">
-    <div id="header">
-        <a href="https://www.researchgate.net/" class="logo-link lf">
-            <img src="http://news.researchgate.net/templates/researchgate/img/logo.png" alt="ResearchGate">
-        </a>
-        <a href="https://www.researchgate.net/" class="header-link g-back rf">
-            Go to ResearchGate
-            <span class="caret"></span>
-        </a>
+    <div id="wraphead">
+        <div id="header">
+            <a href="https://www.researchgate.net/" class="logo-link lf">
+                <img src="http://news.researchgate.net/templates/researchgate/img/logo.png" alt="ResearchGate">
+            </a>
+            <a href="https://www.researchgate.net/" class="header-link g-back rf">
+                Go to ResearchGate
+                <span class="caret"></span>
+            </a>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div id="wrapmiddle">
+        <div class="header-headline" style="cursor: pointer;" onclick="document.location = '{{site.baseurl}}';"><span style="font-size: 20px; font-weight: bold;">{{site.name}}</span> <span style="color: #666; font-size: 14px;">{{site.slogan}}</span></div>
         <div class="clear"></div>
     </div>
-</div>
-<div id="wrapmiddle">
-    <div class="header-headline" style="cursor: pointer;" onclick="document.location = '{{site.baseurl}}';"><span style="font-size: 20px; font-weight: bold;">{{site.name}}</span> <span style="color: #666; font-size: 14px;">{{site.slogan}}</span></div>
-    <div class="clear"></div>
-</div>
 
-{{ content }}
+    {{ content }}
 
 
-<aside id="sidebar">
-    <div class="widget span3">
-        <div class="map">
-            <iframe src="http://www.openstreetmap.org/export/embed.html?bbox=13.383756279945372%2C52.530020773041336%2C13.38498204946518%2C52.531526815741714&amp;marker=52.5307729850064%2C13.384370505809784&amp;layer=mapnik">
-            </iframe><br>
-            <small><a href="http://www.openstreetmap.org/?mlat=52.53077&amp;mlon=13.38437#map=19/52.53077/13.38437">Open larger map</a></small>
+    <aside id="sidebar">
+        <div class="widget span3">
+            <div class="map">
+                <iframe src="http://www.openstreetmap.org/export/embed.html?bbox=13.383756279945372%2C52.530020773041336%2C13.38498204946518%2C52.531526815741714&amp;marker=52.5307729850064%2C13.384370505809784&amp;layer=mapnik">
+                </iframe><br>
+                <small><a href="http://www.openstreetmap.org/?mlat=52.53077&amp;mlon=13.38437#map=19/52.53077/13.38437">Open larger map</a></small>
+            </div>
+
+            <h4>Location &amp; Contact</h4>
+            <p>ResearchGate GmbH<br>
+                Invalidenstr. 115<br>
+                10115 Berlin</p>
+
+            <h4>S-Bahn</h4>
+            <p>
+                S1 - <a href="https://www.s-bahn-berlin.de/fahrplanundnetz/bahnhof/nordbahnhof/109">S-Nordbahnhof</a><br/>
+                S2 - <a href="https://www.s-bahn-berlin.de/fahrplanundnetz/bahnhof/nordbahnhof/109">S-Nordbahnhof</a><br/>
+                S25 - <a href="https://www.s-bahn-berlin.de/fahrplanundnetz/bahnhof/nordbahnhof/109">S-Nordbahnhof</a>
+            </p>
+
+            <h4>U-Bahn</h4>
+            <p>
+                U6 - <a href="http://www.bvg.de/index.php/de/3734/name/U-Bahnlinie+U6/area/89321.html">U-Naturkundemuseum</a>
+            </p>
         </div>
+    </aside>
 
-        <h4>Location &amp; Contact</h4>
-        <p>ResearchGate GmbH<br>
-            Invalidenstr. 115<br>
-            10115 Berlin</p>
-
-        <h4>S-Bahn</h4>
-        <p>
-            S1 - <a href="https://www.s-bahn-berlin.de/fahrplanundnetz/bahnhof/nordbahnhof/109">S-Nordbahnhof</a><br/>
-            S2 - <a href="https://www.s-bahn-berlin.de/fahrplanundnetz/bahnhof/nordbahnhof/109">S-Nordbahnhof</a><br/>
-            S25 - <a href="https://www.s-bahn-berlin.de/fahrplanundnetz/bahnhof/nordbahnhof/109">S-Nordbahnhof</a>
-        </p>
-
-        <h4>U-Bahn</h4>
-        <p>
-            U6 - <a href="http://www.bvg.de/index.php/de/3734/name/U-Bahnlinie+U6/area/89321.html">U-Naturkundemuseum</a>
-        </p>
-    </div>
-</aside>
-
-</body>
+    </body>
 </html>
