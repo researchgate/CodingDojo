@@ -5,7 +5,7 @@ The [CodingDojo] is for all developers in Berlin who want to improve
 their coding skills by practicing them together with fellow programmers. It's all
 about having fun while coding.
 
-We always meet on the **last Thursday of the month** at 7pm in the offices of [ResearchGate].
+We always meet on the **last Thursday of the month** at **7pm** in the offices of [ResearchGate].
 
 **Check out** our [blog] for more information.
 
