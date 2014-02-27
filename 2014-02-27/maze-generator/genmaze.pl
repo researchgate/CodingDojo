@@ -71,30 +71,34 @@ sub get_marked {
 }
 
 sub print_maze {
+   my $buf = "";
+
    for (1..30) {
-      print STDERR "\n";
+      $buf .= "\n";
    }
 
    my $lineno = 0;
    foreach my $row (@maze) {
-      printf STDERR "%2d  ", $lineno;
+      $buf .= sprintf "%2d  ", $lineno;
       foreach my $field (@$row) {
          if ($field) {
-            print STDERR ".";
+            $buf .= ".";
          }
          else {
-            print STDERR "#";
+            $buf .= "#";
          }
       }
-      print STDERR "\n";
+      $buf .= "\n";
       $lineno++;
    }
+
+   print STDERR $buf;
 }
 
 push_path(0,0);
 
 while (@path) {
-   usleep(2*1000);
+   #usleep(9*1000);
    print_maze();
 
    my $p = $path[$#path];
