@@ -8,7 +8,7 @@ my $startaddr = 0x0200;
 my %colmap = (
    "X" => "X",
    " " => "A",
-);
+  );
 
 printf "LDX #\$00\n"; # color of walls
 printf "LDA #\$0e\n"; # color of free space

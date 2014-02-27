@@ -13,7 +13,7 @@ my @path = ();
 sub push_path {
    my $px = shift;
    my $py = shift;
-   
+
    die "px=$px out of bounds" unless $px >= 0 && $px < 32;
    die "py=$py out of bounds" unless $py >= 0 && $py < 32;
 
@@ -27,16 +27,21 @@ sub get_directions {
    my $fy = shift;
 
    return grep {$_->[0] >= 0 && $_->[0] < 32 && $_->[1] >= 0 && $_->[1] < 32} (
-#       [$fx-1, $fy-1],
-       [$fx-1, $fy],
-#       [$fx-1, $fy+1],
-       [$fx, $fy-1],
-#       [$fx, $fy],
-       [$fx, $fy+1],
-#       [$fx+1, $fy-1],
-       [$fx+1, $fy],
-#       [$fx+1, $fy+1],
-   );
+
+      #       [$fx-1, $fy-1],
+      [$fx-1, $fy],
+
+      #       [$fx-1, $fy+1],
+      [$fx, $fy-1],
+
+      #       [$fx, $fy],
+      [$fx, $fy+1],
+
+      #       [$fx+1, $fy-1],
+      [$fx+1, $fy],
+
+      #       [$fx+1, $fy+1],
+     );
 }
 
 sub get_neighbors {
@@ -44,48 +49,47 @@ sub get_neighbors {
    my $fy = shift;
 
    return grep {$_->[0] >= 0 && $_->[0] < 32 && $_->[1] >= 0 && $_->[1] < 32} (
-       [$fx-1, $fy-1],
-       [$fx-1, $fy],
-       [$fx-1, $fy+1],
-       [$fx, $fy-1],
-#       [$fx, $fy],
-       [$fx, $fy+1],
-       [$fx+1, $fy-1],
-       [$fx+1, $fy],
-       [$fx+1, $fy+1],
-   );
+      [$fx-1, $fy-1],
+      [$fx-1, $fy],
+      [$fx-1, $fy+1],
+      [$fx, $fy-1],
+
+      #       [$fx, $fy],
+      [$fx, $fy+1],
+      [$fx+1, $fy-1],
+      [$fx+1, $fy],
+      [$fx+1, $fy+1],
+     );
 }
 
 sub get_unmarked {
-    return grep {!$maze[$_->[0]][$_->[1]]} @_;
+   return grep {!$maze[$_->[0]][$_->[1]]} @_;
 }
 
 sub get_marked {
-    return grep {$maze[$_->[0]][$_->[1]]} @_;
+   return grep {$maze[$_->[0]][$_->[1]]} @_;
 }
 
 sub print_maze {
-    for (1..30) {
-       print STDERR "\n";
-    }
+   for (1..30) {
+      print STDERR "\n";
+   }
 
-    my $lineno = 0;
-    foreach my $row (@maze) {
-       printf STDERR "%2d  ", $lineno;
-       foreach my $field (@$row) {
-          if ($field) {
-              print STDERR ".";
-          }
-          else {
-              print STDERR "#";
-          }
-       }
-       print STDERR "\n";
-       $lineno++;
-    }
+   my $lineno = 0;
+   foreach my $row (@maze) {
+      printf STDERR "%2d  ", $lineno;
+      foreach my $field (@$row) {
+         if ($field) {
+            print STDERR ".";
+         }
+         else {
+            print STDERR "#";
+         }
+      }
+      print STDERR "\n";
+      $lineno++;
+   }
 }
-
-
 
 push_path(0,0);
 
@@ -101,8 +105,8 @@ while (@path) {
 
    my @D = get_unmarked(get_directions($px, $py));
    my @candidates = grep {1 == int(
-      grep {!$Np{($_->[0]).",".($_->[1])}} get_marked(get_neighbors($_->[0], $_->[1]))
-   )} @D;
+         grep {!$Np{($_->[0]).",".($_->[1])}} get_marked(get_neighbors($_->[0], $_->[1]))
+        )} @D;
 
    if (@candidates) {
       my $i = floor(rand(int(@candidates)));
@@ -114,16 +118,14 @@ while (@path) {
    }
 }
 
-
-
-    foreach my $row (@maze) {
-       foreach my $field (@$row) {
-          if ($field) {
-              print " ";
-          }
-          else {
-              print "X";
-          }
-       }
-       print "\n";
-    }
+foreach my $row (@maze) {
+   foreach my $field (@$row) {
+      if ($field) {
+         print " ";
+      }
+      else {
+         print "X";
+      }
+   }
+   print "\n";
+}
